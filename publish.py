@@ -280,6 +280,7 @@ class PublishWantingFrame(tk.Frame):
         if image_path:
             file_name = os.path.basename(self.upload_image_path)
             name, ext = os.path.splitext(file_name)
+            timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
             new_file_name = f"{name}_{timestamp}{ext}"
             new_file_path = resource_path(os.path.join(self.images_folder, new_file_name))
 
